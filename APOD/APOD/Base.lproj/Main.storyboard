@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="APOD" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oZC-ha-TAN">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="NHQ-T4-SxN"/>
+                                    <constraint firstAttribute="height" constant="250" id="bXP-Ue-2HH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXY-vj-Slx">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="hds-pZ-hX2">
+                                <date key="date" timeIntervalSinceReferenceDate="500169548.644988">
+                                    <!--2016-11-06 23:59:08 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="nasaDatePickerChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="86T-md-i13"/>
+                                </connections>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKY-E0-mso">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gXY-vj-Slx" firstAttribute="top" secondItem="oZC-ha-TAN" secondAttribute="bottom" constant="8" id="1mA-WS-Y2x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gXY-vj-Slx" secondAttribute="trailing" constant="8" id="5vW-Wi-zyZ"/>
+                            <constraint firstItem="oZC-ha-TAN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Rkj-le-dgu"/>
+                            <constraint firstItem="RKY-E0-mso" firstAttribute="top" secondItem="gXY-vj-Slx" secondAttribute="bottom" constant="8" id="XoO-sv-Nai"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hds-pZ-hX2" secondAttribute="bottom" constant="8" id="YUw-F1-HBQ"/>
+                            <constraint firstItem="oZC-ha-TAN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZcH-YS-3be"/>
+                            <constraint firstItem="RKY-E0-mso" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="eZW-6s-p51"/>
+                            <constraint firstItem="hds-pZ-hX2" firstAttribute="top" secondItem="RKY-E0-mso" secondAttribute="bottom" constant="8" id="jp3-EY-xfZ"/>
+                            <constraint firstItem="gXY-vj-Slx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="oG0-DM-YKk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RKY-E0-mso" secondAttribute="trailing" constant="8" id="tV9-AT-Bd2"/>
+                            <constraint firstItem="hds-pZ-hX2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="wg0-9I-Ytc"/>
+                            <constraint firstAttribute="trailing" secondItem="hds-pZ-hX2" secondAttribute="trailing" constant="8" id="z19-js-jdg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nasaDatePicker" destination="hds-pZ-hX2" id="bRL-Cm-2o4"/>
+                        <outlet property="nasaImageViewer" destination="oZC-ha-TAN" id="dTJ-5t-E38"/>
+                        <outlet property="nasaNameLabel" destination="gXY-vj-Slx" id="VyV-1G-fNh"/>
+                        <outlet property="nasaTextView" destination="RKY-E0-mso" id="2WG-KR-GpZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
